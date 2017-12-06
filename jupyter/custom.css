@@ -1,0 +1,74 @@
+body,
+a,
+div#notebook_toolbar,
+.toolbar_info,
+ul#tabs a,
+.nav-tabs,
+#header,
+.navbar-default,
+.dropdown-menu,
+.btn-sm,
+.btn-group-sm > .btn,
+.btn-sm,
+.btn-group-sm > .btn:hover
+{
+ font-family: "Droid Sans", "Cambria", sans-serif;
+ font-size: 11pt;
+}
+
+div#notebook,
+.modal-content,
+.modal-header,
+div.text_cell,
+div.text_cell_render pre,
+div.text_cell_render,
+div.cell.text_cell.rendered.selected,
+div.cell.text_cell.unrendered.selected,
+div.cell.text_cell.selected,
+.edit_mode div.cell.text_cell.selected,
+div.text_cell.unrendered,
+div.text_cell.unrendered.selected,
+div.edit_mode div.text_cell.unrendered,
+.dataframe th,
+.rendered_html th,
+.dataframe-summary-row tr:last-child,
+.dataframe-summary-col td:last-child,
+.rendered_html :link
+{
+ font-family: "Droid Sans", "Cambria", sans-serif;
+ font-size: 10pt;
+}
+
+.rendered_html table,
+.rendered_html tr,
+.rendered_html td,
+.dataframe td,
+.rendered_html td,
+.rendered_html pre,
+div.text_cell_render pre,
+div.output_subarea.output_text.output_stream.output_stdout,
+div.output_subarea.output_text,
+div.output_area pre,
+div.output_html,
+div.prompt,
+div.prompt.input_prompt,
+div.prompt.output_prompt,
+div.out_prompt_overlay.prompt,
+div.out_prompt_overlay.prompt:hover,
+div.CodeMirror,
+div.CodeMirror pre,
+.cm-s-ipython.CodeMirror
+{
+ font-family: "Source Code Pro", "Consolas", monospace;
+ font-size: 10pt;
+}
+
+div.text_cell_render h1,
+div.text_cell_render h2,
+div.text_cell_render h3,
+div.text_cell_render h4,
+div.text_cell_render h5,
+div.text_cell_render h6
+{
+ font-family: "Droid Sans", "Cambria", sans-serif;
+}

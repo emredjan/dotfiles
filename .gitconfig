@@ -1,0 +1,14 @@
+[user]
+    name = Emre Can
+    email = emredjan@gmail.com
+[color]
+    ui = auto
+[credential]
+    helper = libsecret 
+[alias]
+    a = add .
+    c = commit -m
+    p = push
+    pm = push -u origin master
+    s = status
+    u = remote update
