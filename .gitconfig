@@ -11,4 +11,5 @@
     p = push
     pm = push -u origin master
     s = status
+    i = init
     u = remote update

@@ -3,16 +3,16 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
-Plug 'flazz/vim-colorschemes'
-Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'plasticboy/vim-markdown'
 Plug 'cjrh/vim-conda'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
-"Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
