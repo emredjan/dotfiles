@@ -1,9 +1,17 @@
 #!/usr/bin/env python
 
 import os
+import platform
+import shutil
 
+system = platform.system()
 home = os.path.expanduser('~')
 dotdir = os.getcwd()
+
+if system == 'Darwin':
+    shutil.copyfile(dotdir + '/' + '.gitconfig_mac', dotdir + '/' + '.gitconfig')
+elif system == 'Linux':
+    shutil.copyfile(dotdir + '/' + '.gitconfig_linux', dotdir + '/' + '.gitconfig')
 
 dotfiles = ['.gitconfig',
             '.Rprofile',

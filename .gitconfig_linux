@@ -4,7 +4,7 @@
 [color]
     ui = auto
 [credential]
-    helper = osxkeychain
+    helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
 [alias]
     a = add .
     c = commit -m
