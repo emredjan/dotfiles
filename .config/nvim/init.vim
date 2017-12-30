@@ -14,6 +14,7 @@ Plug 'cjrh/vim-conda'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/terminus'
+Plug 'chiel92/vim-autoformat'
 
 call plug#end()
 
