@@ -2,24 +2,26 @@
 
 import os
 import platform
-import shutil
 
 system = platform.system()
 home = os.path.expanduser('~')
 dotdir = os.getcwd()
 
+
+dotfiles = [('.Rprofile', '.Rprofile'),
+            ('.jupyter/custom/custom.css', '.jupyter/custom/custom.css'),
+            ('.config/nvim/init.vim', '.config/nvim/init.vim')]
+
 if system == 'Darwin':
-    shutil.copyfile(dotdir + '/' + '.gitconfig_mac', dotdir + '/' + '.gitconfig')
+    dotfiles_add = [('.gitconfig_mac', '.gitconfig'),
+                    ('.tmux.conf_mac', '.tmux.conf')]
 elif system == 'Linux':
-    shutil.copyfile(dotdir + '/' + '.gitconfig_linux', dotdir + '/' + '.gitconfig')
+    dotfiles_add = [('.gitconfig_linux', '.gitconfig'),
+                    ('.tmux.conf_linux', '.tmux.conf')]
 
-dotfiles = ['.gitconfig',
-            '.Rprofile',
-            '.tmux.conf',
-            '.jupyter/custom/custom.css',
-            '.config/nvim/init.vim']
+dotfiles += dotfiles_add
 
-dotlinks = [(dotdir + '/' + d, home + '/' + d) for d in dotfiles]
+dotlinks = [(dotdir + '/' + s, home + '/' + d) for s, d in dotfiles]
 
 for src, dst in dotlinks:
 

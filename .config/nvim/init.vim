@@ -13,6 +13,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'cjrh/vim-conda'
 Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
+Plug 'wincent/terminus'
 
 call plug#end()
 
