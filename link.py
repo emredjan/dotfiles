@@ -14,7 +14,8 @@ dotfiles = [('.Rprofile', '.Rprofile'),
 
 if system == 'Darwin':
     dotfiles_add = [('.gitconfig_mac', '.gitconfig'),
-                    ('.tmux.conf_mac', '.tmux.conf')]
+                    ('.tmux.conf_mac', '.tmux.conf'),
+                    ('.config/fish/config.fish_mac', '.config/fish/config.fish')]
 elif system == 'Linux':
     dotfiles_add = [('.gitconfig_linux', '.gitconfig'),
                     ('.tmux.conf_linux', '.tmux.conf')]
