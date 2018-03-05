@@ -1,0 +1,70 @@
+# Path
+export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:$HOME/bin:/usr/local/bin:$PATH:~/zeppelin/bin:~/.cargo/bin
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/emredjan/.oh-my-zsh
+
+
+### 3rd Party ###
+# CUDA Stuff
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
+export CUDA_HOME=/usr/local/cuda-8.0
+
+# Conda Stuff
+. ~/anaconda3/etc/profile.d/conda.sh
+export CONDA_LEFT_PROMPT=1
+
+# rbenv
+eval "$(rbenv init -)"
+
+# thefuck
+eval $(thefuck --alias)
+
+# z
+. ~/zsh/z.sh
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Good themes: fishy, simple, wezm
+ZSH_THEME="simple"
+
+# COMPLETION_WAITING_DOTS="true"
+
+HIST_STAMPS="dd/mm/yyyy"
+
+plugins=(
+  git
+  copyfile
+  copydir
+  history-substring-search
+  tmux
+
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+source /home/emredjan/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

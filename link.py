@@ -18,7 +18,8 @@ if system == 'Darwin':
                     ('.config/fish/config.fish_mac', '.config/fish/config.fish')]
 elif system == 'Linux':
     dotfiles_add = [('.gitconfig_linux', '.gitconfig'),
-                    ('.tmux.conf_linux', '.tmux.conf')]
+                    ('.tmux.conf_linux', '.tmux.conf'),
+                    ('.zshrc_linux', '.zshrc')]
 
 dotfiles += dotfiles_add
 
