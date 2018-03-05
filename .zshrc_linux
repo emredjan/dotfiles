@@ -20,8 +20,8 @@ eval "$(rbenv init -)"
 # thefuck
 eval $(thefuck --alias)
 
-# z
-. ~/zsh/z.sh
+# z (use plugin)
+# . ~/zsh/z.sh
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -41,7 +41,7 @@ plugins=(
   copydir
   history-substring-search
   tmux
-
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
