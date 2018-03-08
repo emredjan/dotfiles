@@ -11,6 +11,7 @@ dotdir = os.getcwd()
 dotfiles = [('.Rprofile', '.Rprofile'),
             ('.jupyter/custom/custom.css', '.jupyter/custom/custom.css'),
             ('.config/nvim/init.vim', '.config/nvim/init.vim')]
+            
 
 if system == 'Darwin':
     dotfiles_add = [('.gitconfig_mac', '.gitconfig'),
@@ -19,7 +20,8 @@ if system == 'Darwin':
 elif system == 'Linux':
     dotfiles_add = [('.gitconfig_linux', '.gitconfig'),
                     ('.tmux.conf_linux', '.tmux.conf'),
-                    ('.zshrc_linux', '.zshrc')]
+                    ('.zshrc_linux', '.zshrc'),
+                    ('.oh-my-zsh/custom/aliases_linux.zsh', '.oh-my-zsh/custom/aliases.zsh')]
 
 dotfiles += dotfiles_add
 
