@@ -15,6 +15,7 @@ Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/terminus'
 Plug 'chiel92/vim-autoformat'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
