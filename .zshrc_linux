@@ -31,7 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Good themes: fishy, simple, wezm
-ZSH_THEME="simple"
+ZSH_THEME="mortalscumbag"
 
 # COMPLETION_WAITING_DOTS="true"
 
@@ -44,6 +44,7 @@ plugins=(
   history-substring-search
   tmux
   z
+  shrink-path
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
