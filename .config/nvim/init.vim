@@ -10,8 +10,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'plasticboy/vim-markdown'
-Plug 'cjrh/vim-conda'
-Plug 'valloric/youcompleteme'
+"Plug 'cjrh/vim-conda'
+"Plug 'valloric/youcompleteme'
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/terminus'
 Plug 'chiel92/vim-autoformat'
@@ -39,8 +39,10 @@ let g:airline_theme='onedark'
 let g:vim_markdown_folding_disabled = 1
 let g:ycm_python_binary_path = 'python'
 let g:conda_startup_msg_suppress = 1
-let g:python3_host_prog = '/usr/local/bin/python3'
+"let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = 'python3'
 let g:loaded_python_provider = 1
+let g:jedi#force_py_version = 3
 let NERDTreeShowHidden=1
 
 highlight Pmenu ctermfg=232 ctermbg=252 guifg=#ffffff guibg=#3a3a3a
