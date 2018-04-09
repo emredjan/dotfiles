@@ -1,0 +1,9 @@
+pinned_packages:
+  - defaults::openssl
+  - defaults::cryptography
+  - defaults::ca-certificates
+  - defaults::libcurl
+  - defaults::curl
+  - defaults::certifi
+  - defaults::python
+  - defaults::conda
