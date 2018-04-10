@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:$HOME/bin:/usr/local/bin:$PATH:~/zeppelin/bin:~/.cargo/bin
+export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/i386-linux:~/bin:/usr/local/bin:$PATH:~/.cargo/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/emredjan/.oh-my-zsh
