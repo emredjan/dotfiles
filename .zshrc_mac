@@ -1,11 +1,13 @@
-autoload -Uz compinit && compinit
-
 # Path
 export PATH=~/google-cloud-sdk/bin:~/.rbenv/shims:/usr/local/bin:$PATH:~/dscli/tools
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# fpath
+fpath+=$ZSH_CUSTOM/plugins/conda-zsh-completion
+
+autoload -Uz compinit && compinit
 
 ### 3rd Party ###
 
@@ -49,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export LANG=en_US.UTF-8
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

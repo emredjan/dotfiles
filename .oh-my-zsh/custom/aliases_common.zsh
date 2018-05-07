@@ -16,3 +16,5 @@ alias jl="cb && jupyter lab"
 
 alias zshreload="source ~/.zshrc"
 
+alias lst="ls -ltrh"
+

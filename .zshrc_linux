@@ -1,8 +1,11 @@
 # Path
-export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/i386-linux:~/bin:/usr/local/bin:$PATH:~/.cargo/bin
+export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/emredjan/.oh-my-zsh
+
+# fpath
+fpath+=$ZSH_CUSTOM/plugins/conda-zsh-completion
 
 # Completion
 autoload -Uz compinit && compinit
@@ -49,7 +52,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 source $ZSH/oh-my-zsh.sh
