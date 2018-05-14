@@ -1,6 +1,7 @@
 alias cuc="conda update conda"
 alias cua="conda update --all"
 alias cca="conda clean --all"
+alias cuf="conda update -c conda-forge $(conda list | grep "conda-forge" | awk '{print $1}' | tr '\n' ' ')"
 
 alias clr="clear"
 
