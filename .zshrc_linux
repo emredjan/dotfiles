@@ -5,7 +5,7 @@ export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86
 export ZSH=/home/emredjan/.oh-my-zsh
 
 # fpath
-fpath+=$ZSH_CUSTOM/plugins/conda-zsh-completion
+fpath+=~/.oh-my-zsh/custom/plugins/conda-zsh-completion
 
 # Completion
 autoload -Uz compinit && compinit

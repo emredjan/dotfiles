@@ -5,7 +5,7 @@ export PATH=~/google-cloud-sdk/bin:~/.rbenv/shims:/usr/local/bin:$PATH:~/dscli/t
 export ZSH=~/.oh-my-zsh
 
 # fpath
-fpath+=$ZSH_CUSTOM/plugins/conda-zsh-completion
+fpath+=~/.oh-my-zsh/custom/plugins/conda-zsh-completion
 
 autoload -Uz compinit && compinit
 
