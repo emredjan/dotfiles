@@ -26,6 +26,7 @@ set t_Co=256
 set encoding=utf8
 set number
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set clipboard+=unnamedplus
 
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>

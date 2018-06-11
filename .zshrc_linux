@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/cuda-8.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
+export PATH=/usr/local/cuda/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/emredjan/.oh-my-zsh
@@ -12,8 +12,8 @@ autoload -Uz compinit && compinit
 
 ### 3rd Party ###
 # CUDA Stuff
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
-export CUDA_HOME=/usr/local/cuda-8.0
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+export CUDA_HOME=/usr/local/cuda
 
 # Conda Stuff
 . ~/anaconda3/etc/profile.d/conda.sh
