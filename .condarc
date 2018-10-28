@@ -7,3 +7,4 @@ pinned_packages:
   - defaults::certifi
   - defaults::python
   - defaults::conda
+  - defaults::matplotlib

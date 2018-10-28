@@ -7,7 +7,16 @@ export ZSH=~/.oh-my-zsh
 # fpath
 fpath+=~/.oh-my-zsh/custom/plugins/conda-zsh-completion
 
-autoload -Uz compinit && compinit
+# enable extended glob
+setopt extendedglob
+
+# Completion
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-${HOME}}/$ZSH_COMPDUMP(#qN.mh+24) ]]; then
+    compinit -d $ZSH_COMPDUMP;
+else
+    compinit -C;
+fi;
 
 ### 3rd Party ###
 
@@ -16,18 +25,10 @@ autoload -Uz compinit && compinit
 export CONDA_LEFT_PROMPT=1
 
 # rbenv
-eval "$(rbenv init -)"
-
-# thefuck
-eval $(thefuck --alias)
-
-# z (use plugin)
-# . ~/zsh/z.sh
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+rbenv() {
+    eval "$(command rbenv init -)"
+    rbenv "$@"
+}
 
 # Good themes: fishy, simple, wezm
 ZSH_THEME="mortalscumbag"
@@ -36,6 +37,8 @@ ZSH_THEME="mortalscumbag"
 
 HIST_STAMPS="dd/mm/yyyy"
 
+export NVM_LAZY_LOAD=true
+
 plugins=(
   git
   copyfile
@@ -43,16 +46,15 @@ plugins=(
   history-substring-search
   tmux
   z
+  shrink-path
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-nvm
 )
-
-source $ZSH/oh-my-zsh.sh
-
-# export LANG=en_US.UTF-8
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+source $ZSH/oh-my-zsh.sh
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

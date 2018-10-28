@@ -13,8 +13,8 @@ alias jserve="bundle exec jekyll serve --watch --host 0.0.0.0"
 alias ca="conda activate"
 alias cb="conda activate base"
 alias cx="conda deactivate"
-alias jn="cb && jupyter notebook"
-alias jl="cb && jupyter lab"
+alias jn="jupyter notebook"
+alias jl="conda activate base && jupyter lab"
 
 alias zshreload="source ~/.zshrc"
 

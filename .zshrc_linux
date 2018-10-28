@@ -1,5 +1,5 @@
 # Path
-export PATH=/usr/local/cuda/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
+export PATH=/usr/local/cuda-10.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/emredjan/.oh-my-zsh
@@ -7,31 +7,31 @@ export ZSH=/home/emredjan/.oh-my-zsh
 # fpath
 fpath+=~/.oh-my-zsh/custom/plugins/conda-zsh-completion
 
+# enable extended glob
+setopt extendedglob
+
 # Completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-${HOME}}/$ZSH_COMPDUMP(#qN.mh+24) ]]; then
+    compinit -d $ZSH_COMPDUMP;
+else
+    compinit -C;
+fi;
 
 ### 3rd Party ###
 # CUDA Stuff
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64
-export CUDA_HOME=/usr/local/cuda
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64
+export CUDA_HOME=/usr/local/cuda-10.0
 
 # Conda Stuff
 . ~/anaconda3/etc/profile.d/conda.sh
 export CONDA_LEFT_PROMPT=1
 
 # rbenv
-eval "$(rbenv init -)"
-
-# thefuck
-eval $(thefuck --alias)
-
-# z (use plugin)
-# . ~/zsh/z.sh
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+rbenv() {
+    eval "$(command rbenv init -)"
+    rbenv "$@"
+}
 
 # Good themes: fishy, simple, wezm
 ZSH_THEME="mortalscumbag"
@@ -39,6 +39,8 @@ ZSH_THEME="mortalscumbag"
 # COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd/mm/yyyy"
+
+export NVM_LAZY_LOAD=true
 
 plugins=(
   git
@@ -50,6 +52,7 @@ plugins=(
   shrink-path
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-nvm
 )
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
@@ -58,4 +61,3 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 source $ZSH/oh-my-zsh.sh
 
 # export LANG=en_US.UTF-8
-
