@@ -1,5 +1,7 @@
+NPM_PACKAGES="${HOME}/.npm-packages"
+
 # Path
-export PATH=/usr/local/cuda-10.0/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
+export PATH=/usr/local/cuda-10.0/bin:$NPM_PACKAGES/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/emredjan/.oh-my-zsh
@@ -40,8 +42,6 @@ ZSH_THEME="mortalscumbag"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-export NVM_LAZY_LOAD=true
-
 plugins=(
   git
   copyfile
@@ -52,7 +52,6 @@ plugins=(
   shrink-path
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-nvm
 )
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
