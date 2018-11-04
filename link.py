@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import platform
@@ -35,5 +35,8 @@ for src, dst in dotlinks:
     if os.path.islink(dst) or os.path.isfile(dst):
         os.remove(dst)
 
-    os.symlink(src, dst)
+    try:
+        os.symlink(src, dst)
+    except FileNotFoundError:
+        print(dst, 'does not exist, skipping.')
 

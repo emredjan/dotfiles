@@ -1,5 +1,10 @@
 NPM_PACKAGES="${HOME}/.npm-packages"
 
+# Solve WSL issues
+case $(uname -a) in
+   *Microsoft*) unsetopt BG_NICE ;;
+esac
+
 # Path
 export PATH=/usr/local/cuda-10.0/bin:$NPM_PACKAGES/bin:~/.rbenv/bin:/usr/local/texlive/2017/bin/x86_64-linux:~/bin:/usr/local/bin:~/.cargo/bin:$PATH
 
